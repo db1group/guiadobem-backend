@@ -1,0 +1,66 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="estabelecimento">
+            <h2><span jhiTranslate="appbemApp.estabelecimento.detail.title">Estabelecimento</span> {{ estabelecimento.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="appbemApp.estabelecimento.nome">Nome</span></dt>
+                <dd>
+                    <span>{{ estabelecimento.nome }}</span>
+                </dd>
+                <dt><span jhiTranslate="appbemApp.estabelecimento.tipo">Tipo</span></dt>
+                <dd>
+                    <span>{{ estabelecimento.tipo }}</span>
+                </dd>
+                <dt><span jhiTranslate="appbemApp.estabelecimento.telefone">Telefone</span></dt>
+                <dd>
+                    <span>{{ estabelecimento.telefone }}</span>
+                </dd>
+                <dt><span jhiTranslate="appbemApp.estabelecimento.whatsapp">Whatsapp</span></dt>
+                <dd>
+                    <span>{{ estabelecimento.whatsapp }}</span>
+                </dd>
+                <dt><span jhiTranslate="appbemApp.estabelecimento.responsavel">Responsavel</span></dt>
+                <dd>
+                    <span>{{ estabelecimento.responsavel }}</span>
+                </dd>
+                <dt><span jhiTranslate="appbemApp.estabelecimento.urlLogo">Url Logo</span></dt>
+                <dd>
+                    <span>{{ estabelecimento.urlLogo }}</span>
+                </dd>
+                <dt><span jhiTranslate="appbemApp.estabelecimento.publicar">Publicar</span></dt>
+                <dd>
+                    <span>{{ estabelecimento.publicar }}</span>
+                </dd>
+                <dt><span jhiTranslate="appbemApp.estabelecimento.cidade">Cidade</span></dt>
+                <dd>
+                    <div *ngIf="estabelecimento.cidadeId">
+                        <a [routerLink]="['/cidade-appdobem', estabelecimento.cidadeId, 'view']">{{ estabelecimento.cidadeId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="appbemApp.estabelecimento.categoria">Categoria</span></dt>
+                <dd>
+                    <div *ngIf="estabelecimento.categoriaId">
+                        <a [routerLink]="['/categoria-appdobem', estabelecimento.categoriaId, 'view']">{{ estabelecimento.categoriaId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/estabelecimento-appdobem', estabelecimento.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

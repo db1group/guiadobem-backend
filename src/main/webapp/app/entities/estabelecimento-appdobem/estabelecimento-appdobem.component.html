@@ -1,0 +1,95 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="appbemApp.estabelecimento.home.title">Estabelecimentos</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-estabelecimento-appdobem" [routerLink]="['/estabelecimento-appdobem/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="appbemApp.estabelecimento.home.createLabel">
+            Create a new Estabelecimento
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="estabelecimentos?.length === 0">
+        <span jhiTranslate="appbemApp.estabelecimento.home.notFound">No estabelecimentos found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="estabelecimentos?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="nome"><span jhiTranslate="appbemApp.estabelecimento.nome">Nome</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="tipo"><span jhiTranslate="appbemApp.estabelecimento.tipo">Tipo</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="telefone"><span jhiTranslate="appbemApp.estabelecimento.telefone">Telefone</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="whatsapp"><span jhiTranslate="appbemApp.estabelecimento.whatsapp">Whatsapp</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="responsavel"><span jhiTranslate="appbemApp.estabelecimento.responsavel">Responsavel</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="urlLogo"><span jhiTranslate="appbemApp.estabelecimento.urlLogo">Url Logo</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="publicar"><span jhiTranslate="appbemApp.estabelecimento.publicar">Publicar</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="cidadeId"><span jhiTranslate="appbemApp.estabelecimento.cidade">Cidade</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="categoriaId"><span jhiTranslate="appbemApp.estabelecimento.categoria">Categoria</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let estabelecimento of estabelecimentos ;trackBy: trackId">
+                    <td><a [routerLink]="['/estabelecimento-appdobem', estabelecimento.id, 'view']">{{ estabelecimento.id }}</a></td>
+                    <td>{{ estabelecimento.nome }}</td>
+                    <td>{{ estabelecimento.tipo }}</td>
+                    <td>{{ estabelecimento.telefone }}</td>
+                    <td>{{ estabelecimento.whatsapp }}</td>
+                    <td>{{ estabelecimento.responsavel }}</td>
+                    <td>{{ estabelecimento.urlLogo }}</td>
+                    <td>{{ estabelecimento.publicar }}</td>
+                    <td>
+                        <div *ngIf="estabelecimento.cidadeId">
+                            <a [routerLink]="['/cidade-appdobem', estabelecimento.cidadeId , 'view']" >{{ estabelecimento.cidadeId }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="estabelecimento.categoriaId">
+                            <a [routerLink]="['/categoria-appdobem', estabelecimento.categoriaId , 'view']" >{{ estabelecimento.categoriaId }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/estabelecimento-appdobem', estabelecimento.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/estabelecimento-appdobem', estabelecimento.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(estabelecimento)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="estabelecimentos?.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>

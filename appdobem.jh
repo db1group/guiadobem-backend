@@ -1,0 +1,29 @@
+entity Cidade {
+	nome String required,
+    urlImagem String
+}
+
+entity Categoria {
+	nome String required,
+    urlImagem String
+}
+
+entity Estabelecimento {
+	nome String required,
+    tipo String required,
+    telefone String,
+    whatsapp String,
+    responsavel String,
+    urlLogo String,
+    publicar Boolean
+}
+
+relationship ManyToOne {
+	Estabelecimento{cidade} to Cidade,
+    Estabelecimento{categoria} to Categoria
+}
+
+dto * with mapstruct
+service all with serviceClass
+angularSuffix * with appdobem
+paginate all with pagination

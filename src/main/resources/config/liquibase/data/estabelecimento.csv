@@ -1,0 +1,29 @@
+id;nome;tipo;telefone;whatsapp;responsavel;url_logo;publicar;cidade_id;categoria_id
+1;Sucrem Cakes;Bolos/Bolos de pote/fatias húngaras/Ovos de páscoa/etc..;(18) 99814-2628;;Aline Lopes;;true;2;2
+2;GA Boutique Semijóias;Semijóias;(18) 99685-7779;;Gisele Azevedo;;true;2;4
+3;Kaia Navarro;Projetos Arquitetônicos/Projeto de Interiores/Consultorias;(18) 99615-3671;;Ana Clara;;true;2;3
+4;Sacolão Giocondo;Frutas, verduras, ovos, mel e etc;(67) 99194-6994;;Lucimara;;true;3;1
+5;Mini Mercado Gilson;supermercado (Estrela dalva 2);(67) 99642-0022;;Gilson;;true;3;1
+6;Supermercado Arapongas;Supermercado de bairro ( Vila Margarida);(67) 99221-1941;;;;true;3;1
+7;Água baiana;Água de coco;(67) 99125-5386;;Água Baiana;;true;3;1
+8;Equipe Folha Verde;Verdura, legume, frutas;(67) 3045-2010;(67) 99871-4444;;;true;3;1
+9;Abakaty Hortifrutti;Verduras, frutas e legumes delivery;(67) 99123-1520;;;;true;3;1
+10;Naji Doces;bolos, chocolates, ovos de páscoa, doces;(67) 99237-8140;;Fabrícia;;true;3;2
+11;Padaria Giocondo;Padaria;(67) 3351-0221;(67) 99294-0926;Nádia;;true;3;2
+12;Brigadeiros da Bel;doces artesanais;(67) 99120-0304;;Isabelle(Bel);;true;3;2
+13;Sonho doce da Lê;Bolos e sobremesas;(67) 99306-6651;;Lê;;true;3;2
+14;Receita natureba;Bolos e doces sem glútem;(67) 99623-2211;;Marcia;;true;3;2
+15;Banca Galã;açaí, agua d ecoco, bebidas salgados;(67) 98446-8773;;Cleiton Rayanne;;true;3;2
+16;Ângela Lenz;bolos, bombons recheados, docinhos, geladinho goumet;(67) 99284-9275;;Angela;;true;3;2
+17;Doce Caroline;doces tradicionais , finos, personalizados e chocolate (ovos de pascoa);(67) 99249-9979;;Carol correia;;true;3;2
+18;Top Cake;mini cupcake;(67) 98185-4405;;Camila Novaes;;true;3;2
+19;Doceria Entre Irmãs;Bolos, doces e ovos de colher;(67) 99977-0373;;Rhandra Grubert;;true;3;2
+20;Arq Arte Personalizados;Lembranças personalizadas e decoração de festas;(71) 99165-3556;;Vanessa Albernaz;;true;3;4
+21;Raquel Furtado;Caixas e lembracinhas personalizadas;(67) 99222-1901;;Raquel Furtado;;true;3;4
+22;Helio Jardinangem;Limpeza de quintal, corte de grama jardinagem;(67) 99107-2884;;Helio;;true;3;3
+23;Chico pedreiro;pequenas reformas, piso, telhados, encanamentos;(67) 99253-18181;;Francisco;;true;3;3
+24;Aline Lopes Francisco;Corretora de Seguros;(67) 98155-0705;;Aline;;true;3;3
+25;Conceitual Corr e adm de Seguros Ltda;Vendas de seguros, de vida empresarial, consorcio;(67) 99622-6136;;Allan;;true;3;3
+26;Studio TRB;treinamento funcional online;(67) 99150-9114;;Taline Rodrigues Barbosa;;true;3;3
+27;Veridiana Queiroz;Psicóloga;(67) 99929-0853;;Veridiana Queiroz;;true;3;3
+
