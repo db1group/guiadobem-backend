@@ -33,9 +33,9 @@ spring:
       enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/appbem?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
-    username: root
-    password:
+    url: jdbc:mysql://guiadobem-db1.ccshik6h2ix6.us-east-1.rds.amazonaws.com:3306/guiadobem-db1?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: admin
+    password: Guia0511!
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -134,8 +134,7 @@ jhipster:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
-application:
-  aws:
-    s3:
-      key: AKIAILOHU2OTVAH7FGYA
-      secret: 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
+aws:
+  s3:
+    key: AKIAILOHU2OTVAH7FGYA
+    secret: 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
