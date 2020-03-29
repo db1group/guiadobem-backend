@@ -124,5 +124,5 @@ jhipster:
 
 aws:
   s3:
-    key: AKIAILOHU2OTVAH7FGYA
-    secret: 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
+    key:
+    secret:
