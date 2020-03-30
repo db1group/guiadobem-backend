@@ -69,7 +69,7 @@
                     <label class="form-control-label" jhiTranslate="appbemApp.estabelecimento.cidade" for="field_cidade">Cidade</label>
                     <select class="form-control" id="field_cidade" name="cidade" formControlName="cidadeId">
                         <option [ngValue]="null"></option>
-                        <option [ngValue]="cidadeOption.id" *ngFor="let cidadeOption of cidades; trackBy: trackById">{{ cidadeOption.id }}</option>
+                        <option [ngValue]="cidadeOption.id" *ngFor="let cidadeOption of cidades; trackBy: trackById">{{ cidadeOption.nome }}</option>
                     </select>
                 </div>
 
@@ -77,7 +77,7 @@
                     <label class="form-control-label" jhiTranslate="appbemApp.estabelecimento.categoria" for="field_categoria">Categoria</label>
                     <select class="form-control" id="field_categoria" name="categoria" formControlName="categoriaId">
                         <option [ngValue]="null"></option>
-                        <option [ngValue]="categoriaOption.id" *ngFor="let categoriaOption of categorias; trackBy: trackById">{{ categoriaOption.id }}</option>
+                        <option [ngValue]="categoriaOption.id" *ngFor="let categoriaOption of categorias; trackBy: trackById">{{ categoriaOption.nome }}</option>
                     </select>
                 </div>
             </div>

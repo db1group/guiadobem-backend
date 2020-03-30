@@ -27,7 +27,7 @@ id;nome;tipo;telefone;whatsapp;responsavel;url_logo;publicar;cidade_id;categoria
 26;Studio TRB;treinamento funcional online;(67) 99150-9114;;Taline Rodrigues Barbosa;;true;3;3
 27;Veridiana Queiroz;Psicóloga;(67) 99929-0853;;Veridiana Queiroz;;true;3;3
 28;Casa Bah Atelie;Doces;44-9941-9329;;Barbara e Douglas;;true;1;2
-29;Home Bakery;Păes, doces e ovos de páscoa ;(44) 99953-9909;;Manuela;;true;1;2
+29;Home Bakery;Pães, doces e ovos de páscoa ;(44) 99953-9909;;Manuela;;true;1;2
 30;Fica Leve;Padaria e confeitaria orgânica ;44 988028709;44 999196838;;;true;1;2
 31;Pedacinho do Céu;Ovos de páscoa, doces, bolos;(44) 9 9770-9169;;Thaynara & Matheus Guerra;;true;1;2
 32;Bolo, que delícia!;Confeitaria Artesanal;44 9168-2029;;Grasiele Felix;;true;1;2
@@ -41,11 +41,11 @@ id;nome;tipo;telefone;whatsapp;responsavel;url_logo;publicar;cidade_id;categoria
 40;Cia Sasaki;Legumes, Verduras e Frutas;(44) 98402-8929;;;;true;1;1
 41;Banca da Elisa;Legumes, Verduras e Frutas;(44) 99808-1436;(44) 99814-0767;Elisa e Cleon;;true;1;1
 42;Horta Seleta;Legumes, Verduras e Frutas;(44) 99980-4670;;Graziela;;true;1;1
-43;Sacolăo Tropical;Legumes, Verduras e Frutas;(44)3226-8689;(44)99139-0452;;;true;1;1
+43;Sacolão Tropical;Legumes, Verduras e Frutas;(44)3226-8689;(44)99139-0452;;;true;1;1
 44;Naturalis Agroecologia;Legumes, Verduras e Frutas;44) 99745-9929;;;;true;1;1
 45;Pontal Nature Orgânicos;Legumes, Verduras e Frutas;(44) 99103-6328;;;;true;1;1
 46;Katsu Alimentos;Legumes, Verduras e Frutas;(44) 99927-8984;;;;true;1;1
-47;Carlos Frutaria (caminhăo da esquina do Bosque);Legumes, Verduras e Frutas;(44) 99707-5781;;;;true;1;1
+47;Carlos Frutaria (caminhão da esquina do Bosque);Legumes, Verduras e Frutas;(44) 99707-5781;;;;true;1;1
 48;Barraca do Gaviolli;Legumes, Verduras e Frutas;(44)99726-2991;(44)99805-5340;;;true;1;1
 49;Horta Eco Digital;Legumes, Verduras e Frutas;;;;;true;1;1
 50;My Fruit;Legumes, Verduras e Frutas;;;;;true;1;1
@@ -57,34 +57,34 @@ id;nome;tipo;telefone;whatsapp;responsavel;url_logo;publicar;cidade_id;categoria
 56;Empório & Cia;Alimentos Saudáveis, Proteina de Soja, Temperos, Sucrilhos;(44) 99930-6161 ;;;;true;1;1
 57;Adriano Feirante ;Legumes, Verduras e Frutas;44 99933-3563;;Adriano ;;true;1;1
 58;Pasioli Morangos;Morangos;44 9977-9783 ;;;;true;1;1
-59;Massas do Ed;Lasanha e Canelone (tem opçăo vegetariana e vegana);(44) 9 9909-9845;;Tiago Machado;;true;1;4
+59;Massas do Ed;Lasanha e Canelone (tem opção vegetariana e vegana);(44) 9 9909-9845;;Tiago Machado;;true;1;4
 60;Borboletas de Papel;Papelaria Personalizada - Convites e lembrancinhas;(44) 9 9912-1936;;Carol Delábio;;true;1;4
 61;Clube da Picanha Maringá;Cortes de Carnes / Assados;(44) 9 9131-6551;;André;;true;1;4
-62;Medida Certa Refeiçőes;congelados saudáveis;(44) 9 9992 8186;;;;true;1;4
+62;Medida Certa Refeições;congelados saudáveis;(44) 9 9992 8186;;;;true;1;4
 63;Armazém Vida Saudável;produtos naturais e pratos saudáveis;(44)99878-3429;;;;true;1;4
 64;Restaurante Novo Sabor;marmitex;(44) 3026-8537;;;;true;1;4
 65;Sabrina Magnabosco;Produtos Mary Kay delivery;;;Sabrina Magnabosco;;true;1;4
 66;Rei do Queijo;queijos;(44) 99980-2033;;;;true;1;4
 67;Gaia;cosméticos artesanais;;;;;true;1;4
 68;Tropicália;cosméticos artesanais;44 9746-4531;;;;true;1;4
-69;Espaço do Pet;raçăo e medicamentos para animais;44 99856-4448;;;;true;1;4
-70;Top Dog Lanches;lanchăo delivery;(44)99900-2212;;;;true;1;4
+69;Espaço do Pet;ração e medicamentos para animais;44 99856-4448;;;;true;1;4
+70;Top Dog Lanches;lanchão delivery;(44)99900-2212;;;;true;1;4
 71;Manejo Flores;Flores;44 99107-0887;;Karla Blanco;;true;1;4
 72;Carnes Fernandes;açougue;44 99865-5362;;;;true;1;4
 73;Santa Fome Foods;marmita fit congelada;(44) 99805-3388;;;;true;1;4
 74;Lady Paper;papelaria personalizada artesanal;;;;;true;1;4
 75;Tiffany's Suculentas;arranjos, suculentas, terrários e lembrancinhas;;;;;true;1;4
 76;Peperoncino Massas;massas e molhos artesanais;(44) 998183850;;;;true;1;4
-77;Tomodatis;porçőes delivery;44 99115-2089;;;;true;1;4
+77;Tomodatis;porções delivery;44 99115-2089;;;;true;1;4
 78;Século Adega;Delivery de bebidas;44 98846.6560;;;;true;1;4
-79;Agropecuária Brasil;raçőes e medicamentos;44 99854-9390;;;;true;1;4
+79;Agropecuária Brasil;rações e medicamentos;44 99854-9390;;;;true;1;4
 80;D'Ângellis Presentes;entrega de brinquedos, presentes e jogos.; (44)99839-4311?;;;;true;1;4
 81;NUTRIFOX;Petshop (produtos para seu pet);(44) 99839-8500;;;;true;1;4
-82;Trick Convenięncia;mercearia,bebidas, gelo, tabacaria, chocolates, sorvete e mais;(44) 3030-2067;;;;true;1;4
+82;Trick Conveniencia;mercearia,bebidas, gelo, tabacaria, chocolates, sorvete e mais;(44) 3030-2067;;;;true;1;4
 83;O Fogareu;carnes assadas;(44) 30239090;;;;true;1;4
 84;Eletrecista Predial e Comercial;Eletrecista;98835 - 0383;;;;true;1;3
 85;Clinica Refletir ;Psicólogo;(44) 99948-8759;;;;true;1;3
 86;Psicoemillyiza;Psicóloga;(44) 999510709;;;;true;1;3
 87;Francyene Yoga;Yoga online;;;;;true;1;3
-88;Beto Assistęncia Apple;assitęncia técnica Apple - busca e entrega;44-988235588 ;;;;true;1;3
-89;DrŞ Bianca Lachimia;Dentista para urgęncias;(44)99881-3970;;;;true;1;3
+88;Beto Assistencia Apple;assitencia técnica Apple - busca e entrega;44-988235588 ;;;;true;1;3
+89;Dra Bianca Lachimia;Dentista para urgencias;(44)99881-3970;;;;true;1;3

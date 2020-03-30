@@ -31,6 +31,10 @@ public class EstabelecimentoDTO implements Serializable {
 
     private Long categoriaId;
 
+    private String cidadeNome;
+
+    private String categoriaNome;
+
     private String base64Image;
 
     private String nomeArquivo;
@@ -133,6 +137,22 @@ public class EstabelecimentoDTO implements Serializable {
 
     public void setBase64Image(String base64Image) {
         this.base64Image = base64Image;
+    }
+
+    public String getCidadeNome() {
+        return cidadeNome;
+    }
+
+    public void setCidadeNome(String cidadeNome) {
+        this.cidadeNome = cidadeNome;
+    }
+
+    public String getCategoriaNome() {
+        return categoriaNome;
+    }
+
+    public void setCategoriaNome(String categoriaNome) {
+        this.categoriaNome = categoriaNome;
     }
 
     @Override

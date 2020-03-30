@@ -34,18 +34,19 @@
                 </dd>
                 <dt><span jhiTranslate="appbemApp.estabelecimento.publicar">Publicar</span></dt>
                 <dd>
-                    <span>{{ estabelecimento.publicar }}</span>
+                    <span *ngIf="estabelecimento.publicar" class="badge badge-success">Sim</span>
+                    <span *ngIf="!estabelecimento.publicar" class="badge badge-danger">Não</span>
                 </dd>
                 <dt><span jhiTranslate="appbemApp.estabelecimento.cidade">Cidade</span></dt>
                 <dd>
                     <div *ngIf="estabelecimento.cidadeId">
-                        <a [routerLink]="['/cidade-appdobem', estabelecimento.cidadeId, 'view']">{{ estabelecimento.cidadeId }}</a>
+                        <a [routerLink]="['/cidade-appdobem', estabelecimento.cidadeId, 'view']">{{ estabelecimento.cidadeNome }}</a>
                     </div>
                 </dd>
                 <dt><span jhiTranslate="appbemApp.estabelecimento.categoria">Categoria</span></dt>
                 <dd>
                     <div *ngIf="estabelecimento.categoriaId">
-                        <a [routerLink]="['/categoria-appdobem', estabelecimento.categoriaId, 'view']">{{ estabelecimento.categoriaId }}</a>
+                        <a [routerLink]="['/categoria-appdobem', estabelecimento.categoriaId, 'view']">{{ estabelecimento.categoriaNome }}</a>
                     </div>
                 </dd>
             </dl>

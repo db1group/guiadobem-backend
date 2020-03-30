@@ -44,15 +44,20 @@
                     <td>{{ estabelecimento.whatsapp }}</td>
                     <td>{{ estabelecimento.responsavel }}</td>
                     <td>{{ estabelecimento.urlLogo }}</td>
-                    <td>{{ estabelecimento.publicar }}</td>
+                    <td *ngIf="estabelecimento.publicar">
+                        <span class="badge badge-success">Sim</span>
+                    </td>
+                    <td *ngIf="!estabelecimento.publicar">
+                        <span class="badge badge-danger">Não</span>
+                    </td>
                     <td>
                         <div *ngIf="estabelecimento.cidadeId">
-                            <a [routerLink]="['/cidade-appdobem', estabelecimento.cidadeId , 'view']" >{{ estabelecimento.cidadeId }}</a>
+                            <a [routerLink]="['/cidade-appdobem', estabelecimento.cidadeId , 'view']" >{{ estabelecimento.cidadeNome }}</a>
                         </div>
                     </td>
                     <td>
                         <div *ngIf="estabelecimento.categoriaId">
-                            <a [routerLink]="['/categoria-appdobem', estabelecimento.categoriaId , 'view']" >{{ estabelecimento.categoriaId }}</a>
+                            <a [routerLink]="['/categoria-appdobem', estabelecimento.categoriaId , 'view']" >{{ estabelecimento.categoriaNome }}</a>
                         </div>
                     </td>
                     <td class="text-right">

@@ -129,4 +129,11 @@ public class CidadeResource {
         log.debug("REST request to get a page of Cidades");
         return ResponseEntity.ok().body(cidadeService.findAllWhitoutPageable());
     }
+
+    @GetMapping("/public/cidades/{id}")
+    public ResponseEntity<CidadeDTO> getPublicCidade(@PathVariable Long id) {
+        log.debug("REST request to get Cidade : {}", id);
+        Optional<CidadeDTO> cidadeDTO = cidadeService.findOne(id);
+        return ResponseUtil.wrapOrNotFound(cidadeDTO);
+    }
 }

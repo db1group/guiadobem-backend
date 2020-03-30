@@ -6,6 +6,7 @@ import br.com.db1.service.dto.EstabelecimentoDTO;
 import br.com.db1.service.mapper.EstabelecimentoMapper;
 import br.com.db1.service.util.ImageUtil;
 import br.com.db1.service.util.RandomUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,9 +37,10 @@ public class EstabelecimentoService {
 
     private ImageUtil imageUtil;
 
-    public EstabelecimentoService(EstabelecimentoRepository estabelecimentoRepository, EstabelecimentoMapper estabelecimentoMapper) {
+    public EstabelecimentoService(EstabelecimentoRepository estabelecimentoRepository, EstabelecimentoMapper estabelecimentoMapper, ImageUtil imageUtil) {
         this.estabelecimentoRepository = estabelecimentoRepository;
         this.estabelecimentoMapper = estabelecimentoMapper;
+        this.imageUtil = imageUtil;
     }
 
     /**
@@ -99,8 +101,12 @@ public class EstabelecimentoService {
     public EstabelecimentoDTO savePublic(EstabelecimentoDTO estabelecimentoDTO) {
         log.debug("Request to save Estabelecimento : {}", estabelecimentoDTO);
         estabelecimentoDTO.setPublicar(Boolean.FALSE);
-        estabelecimentoDTO = save(estabelecimentoDTO);
-        estabelecimentoDTO.setUrlLogo(uploadFile(estabelecimentoDTO.getId(), estabelecimentoDTO.getNomeArquivo(), estabelecimentoDTO.getBase64Image()));
+        if(null != estabelecimentoDTO.getNomeArquivo() && !StringUtils.isEmpty(estabelecimentoDTO.getNomeArquivo())
+            && null != estabelecimentoDTO.getBase64Image() && !StringUtils.isEmpty(estabelecimentoDTO.getBase64Image())) {
+            EstabelecimentoDTO savedEstabelecimentoDTO = save(estabelecimentoDTO);
+            savedEstabelecimentoDTO.setUrlLogo(uploadFile(savedEstabelecimentoDTO.getId(), estabelecimentoDTO.getNomeArquivo(), estabelecimentoDTO.getBase64Image()));
+            return  save(savedEstabelecimentoDTO);
+        }
         return save(estabelecimentoDTO);
     }
 

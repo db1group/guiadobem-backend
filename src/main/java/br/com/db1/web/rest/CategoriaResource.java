@@ -129,4 +129,11 @@ public class CategoriaResource {
         log.debug("REST request to get a all of Categorias");
         return ResponseEntity.ok(categoriaService.findAllWhitoutPageable());
     }
+
+    @GetMapping("/public/categorias/{id}")
+    public ResponseEntity<CategoriaDTO> getPublicCategoria(@PathVariable Long id) {
+        log.debug("REST request to get Categoria : {}", id);
+        Optional<CategoriaDTO> categoriaDTO = categoriaService.findOne(id);
+        return ResponseUtil.wrapOrNotFound(categoriaDTO);
+    }
 }

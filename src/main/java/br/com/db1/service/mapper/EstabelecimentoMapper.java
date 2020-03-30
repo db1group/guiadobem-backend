@@ -14,6 +14,8 @@ public interface EstabelecimentoMapper extends EntityMapper<EstabelecimentoDTO, 
 
     @Mapping(source = "cidade.id", target = "cidadeId")
     @Mapping(source = "categoria.id", target = "categoriaId")
+    @Mapping(source = "categoria.nome", target = "categoriaNome")
+    @Mapping(source = "cidade.nome", target = "cidadeNome")
     EstabelecimentoDTO toDto(Estabelecimento estabelecimento);
 
     @Mapping(source = "cidadeId", target = "cidade")

@@ -9,6 +9,8 @@ export interface IEstabelecimentoAppdobem {
   publicar?: boolean;
   cidadeId?: number;
   categoriaId?: number;
+  categoriaNome?: string;
+  cidadeNome?: string;
 }
 
 export class EstabelecimentoAppdobem implements IEstabelecimentoAppdobem {
@@ -22,7 +24,9 @@ export class EstabelecimentoAppdobem implements IEstabelecimentoAppdobem {
     public urlLogo?: string,
     public publicar?: boolean,
     public cidadeId?: number,
-    public categoriaId?: number
+    public categoriaId?: number,
+    public categoriaNome?: string,
+    public cidadeNome?: string
   ) {
     this.publicar = this.publicar || false;
   }
