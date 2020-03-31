@@ -8,7 +8,7 @@ import java.util.Objects;
  * A DTO for the {@link br.com.db1.domain.Categoria} entity.
  */
 public class CategoriaDTO implements Serializable {
-    
+
     private Long id;
 
     @NotNull
@@ -16,7 +16,8 @@ public class CategoriaDTO implements Serializable {
 
     private String urlImagem;
 
-    
+    private String descricao;
+
     public Long getId() {
         return id;
     }
@@ -39,6 +40,14 @@ public class CategoriaDTO implements Serializable {
 
     public void setUrlImagem(String urlImagem) {
         this.urlImagem = urlImagem;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     @Override

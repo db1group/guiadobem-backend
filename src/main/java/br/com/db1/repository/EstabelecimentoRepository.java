@@ -13,6 +13,6 @@ import java.util.List;
 @Repository
 public interface EstabelecimentoRepository extends JpaRepository<Estabelecimento, Long> {
 
-    List<Estabelecimento> findAllByCidadeIdAndCategoriaIdOrderByNomeAsc(Long cidadeId, Long categoriaId);
+    List<Estabelecimento> findAllByCidadeIdAndCategoriaIdAndPublicarIsTrueOrderByNomeAsc(Long cidadeId, Long categoriaId);
 
 }

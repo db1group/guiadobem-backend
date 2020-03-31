@@ -95,7 +95,7 @@ public class EstabelecimentoService {
     @Transactional(readOnly = true)
     public List<EstabelecimentoDTO> findAll(Long cidadeId, Long categoriaId) {
         log.debug("Request to get all Estabelecimentos");
-        return estabelecimentoMapper.toDto(estabelecimentoRepository.findAllByCidadeIdAndCategoriaIdOrderByNomeAsc(cidadeId, categoriaId));
+        return estabelecimentoMapper.toDto(estabelecimentoRepository.findAllByCidadeIdAndCategoriaIdAndPublicarIsTrueOrderByNomeAsc(cidadeId, categoriaId));
     }
 
     public EstabelecimentoDTO savePublic(EstabelecimentoDTO estabelecimentoDTO) {

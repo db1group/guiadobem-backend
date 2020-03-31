@@ -84,6 +84,6 @@ public class CidadeService {
     @Transactional(readOnly = true)
     public List<CidadeDTO> findAllWhitoutPageable() {
         log.debug("Request to get all Cidades");
-        return cidadeMapper.toDto(cidadeRepository.findAll());
+        return cidadeMapper.toDto(cidadeRepository.findAllByOrderByNome());
     }
 }

@@ -17,7 +17,8 @@
         "title": "Categoria"
       },
       "nome": "Nome",
-      "urlImagem": "Url Imagem"
+      "urlImagem": "Url Imagem",
+      "descricao": "Descrição"
     }
   }
 }

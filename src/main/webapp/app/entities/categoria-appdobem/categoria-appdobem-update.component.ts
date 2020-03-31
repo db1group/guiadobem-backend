@@ -18,7 +18,8 @@ export class CategoriaAppdobemUpdateComponent implements OnInit {
   editForm = this.fb.group({
     id: [],
     nome: [null, [Validators.required]],
-    urlImagem: []
+    urlImagem: [],
+    descricao: []
   });
 
   constructor(protected categoriaService: CategoriaAppdobemService, protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {}
@@ -33,7 +34,8 @@ export class CategoriaAppdobemUpdateComponent implements OnInit {
     this.editForm.patchValue({
       id: categoria.id,
       nome: categoria.nome,
-      urlImagem: categoria.urlImagem
+      urlImagem: categoria.urlImagem,
+      descricao: categoria.descricao
     });
   }
 
@@ -56,7 +58,8 @@ export class CategoriaAppdobemUpdateComponent implements OnInit {
       ...new CategoriaAppdobem(),
       id: this.editForm.get(['id'])!.value,
       nome: this.editForm.get(['nome'])!.value,
-      urlImagem: this.editForm.get(['urlImagem'])!.value
+      urlImagem: this.editForm.get(['urlImagem'])!.value,
+      descricao: this.editForm.get(['descricao'])!.value
     };
   }
 

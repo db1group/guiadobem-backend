@@ -25,6 +25,7 @@
                     <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="nome"><span jhiTranslate="appbemApp.categoria.nome">Nome</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="urlImagem"><span jhiTranslate="appbemApp.categoria.urlImagem">Url Imagem</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="descricao"><span jhiTranslate="appbemApp.categoria.descricao">Descrição</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -33,6 +34,7 @@
                     <td><a [routerLink]="['/categoria-appdobem', categoria.id, 'view']">{{ categoria.id }}</a></td>
                     <td>{{ categoria.nome }}</td>
                     <td>{{ categoria.urlImagem }}</td>
+                    <td>{{ categoria.descricao }}</td>
                     <td class="text-right">
                         <div class="btn-group">
                             <button type="submit"

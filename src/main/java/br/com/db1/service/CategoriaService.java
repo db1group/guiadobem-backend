@@ -85,6 +85,6 @@ public class CategoriaService {
     @Transactional(readOnly = true)
     public List<CategoriaDTO> findAllWhitoutPageable() {
         log.debug("Request to get all Categorias");
-        return categoriaMapper.toDto(categoriaRepository.findAll());
+        return categoriaMapper.toDto(categoriaRepository.findAllByOrderByNome());
     }
 }

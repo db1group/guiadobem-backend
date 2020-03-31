@@ -30,6 +30,9 @@ public class Categoria implements Serializable {
     @Column(name = "url_imagem")
     private String urlImagem;
 
+    @Column(name = "descricao", nullable = false)
+    private String descricao;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -65,6 +68,15 @@ public class Categoria implements Serializable {
         this.urlImagem = urlImagem;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
+
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 
     @Override
     public boolean equals(Object o) {
