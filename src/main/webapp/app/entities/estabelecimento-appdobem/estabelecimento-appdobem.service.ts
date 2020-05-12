@@ -27,9 +27,9 @@ export class EstabelecimentoAppdobemService {
     return this.http.get<IEstabelecimentoAppdobem>(`${this.resourceUrl}/${id}`, { observe: 'response' });
   }
 
-  query(req?: any): Observable<EntityArrayResponseType> {
+  query(query: string, req?: any): Observable<EntityArrayResponseType> {
     const options = createRequestOption(req);
-    return this.http.get<IEstabelecimentoAppdobem[]>(this.resourceUrl, { params: options, observe: 'response' });
+    return this.http.get<IEstabelecimentoAppdobem[]>(this.resourceUrl + '/search/' + query, { params: options, observe: 'response' });
   }
 
   delete(id: number): Observable<HttpResponse<{}>> {

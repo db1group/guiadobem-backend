@@ -69,6 +69,13 @@ public class EstabelecimentoService {
             .map(estabelecimentoMapper::toDto);
     }
 
+    @Transactional(readOnly = true)
+    public Page<EstabelecimentoDTO> findAllByQuery(Pageable pageable, String query) {
+        log.debug("Request to get all Estabelecimentos");
+        return estabelecimentoRepository.findAllByNomeContainingIgnoreCase(pageable, query)
+            .map(estabelecimentoMapper::toDto);
+    }
+
     /**
      * Get one estabelecimento by id.
      *

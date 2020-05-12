@@ -24,6 +24,7 @@ export class EstabelecimentoAppdobemComponent implements OnInit, OnDestroy {
   predicate!: string;
   ascending!: boolean;
   ngbPaginationPage = 1;
+  query: string = '';
 
   constructor(
     protected estabelecimentoService: EstabelecimentoAppdobemService,
@@ -33,19 +34,40 @@ export class EstabelecimentoAppdobemComponent implements OnInit, OnDestroy {
     protected modalService: NgbModal
   ) {}
 
+  search(): void {
+    this.loadPage(0);
+  }
+
+    limpar(): void {
+      this.query = '';
+      this.loadPage(0);
+    }
+
   loadPage(page?: number): void {
     const pageToLoad: number = page || this.page;
-
-    this.estabelecimentoService
-      .query({
-        page: pageToLoad - 1,
-        size: this.itemsPerPage,
-        sort: this.sort()
-      })
-      .subscribe(
-        (res: HttpResponse<IEstabelecimentoAppdobem[]>) => this.onSuccess(res.body, res.headers, pageToLoad),
-        () => this.onError()
-      );
+    if(this.query && this.query !== '') {
+        this.estabelecimentoService
+          .query(this.query, {
+            page: pageToLoad - 1,
+            size: this.itemsPerPage,
+            sort: this.sort()
+          })
+          .subscribe(
+            (res: HttpResponse<IEstabelecimentoAppdobem[]>) => this.onSuccess(res.body, res.headers, pageToLoad),
+            () => this.onError()
+          );
+    } else {
+            this.estabelecimentoService
+              .query(' ', {
+                page: pageToLoad - 1,
+                size: this.itemsPerPage,
+                sort: this.sort()
+              })
+              .subscribe(
+                (res: HttpResponse<IEstabelecimentoAppdobem[]>) => this.onSuccess(res.body, res.headers, pageToLoad),
+                () => this.onError()
+              );
+    }
   }
 
   ngOnInit(): void {

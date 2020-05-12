@@ -90,10 +90,10 @@ public class EstabelecimentoResource {
      * @param pageable the pagination information.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of estabelecimentos in body.
      */
-    @GetMapping("/estabelecimentos")
-    public ResponseEntity<List<EstabelecimentoDTO>> getAllEstabelecimentos(Pageable pageable) {
+    @GetMapping("/estabelecimentos/search/{query}")
+    public ResponseEntity<List<EstabelecimentoDTO>> getAllEstabelecimentos(Pageable pageable, @PathVariable String query) {
         log.debug("REST request to get a page of Estabelecimentos");
-        Page<EstabelecimentoDTO> page = estabelecimentoService.findAll(pageable);
+        Page<EstabelecimentoDTO> page = estabelecimentoService.findAllByQuery(pageable, query);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }

@@ -9,7 +9,11 @@
             </span>
         </button>
     </h2>
-
+    <br />
+    <div>
+        <input type="text" [(ngModel)]="query" placeholder="Nome..."/> <button (click)="search()">Buscar</button> <button (click)="limpar()">Limpar</button>
+    </div>
+    <br />
     <jhi-alert-error></jhi-alert-error>
 
     <jhi-alert></jhi-alert>
